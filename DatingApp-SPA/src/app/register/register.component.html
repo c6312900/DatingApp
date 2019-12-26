@@ -1,0 +1,24 @@
+<form #registerForm="ngForm" (ngSubmit)="register()" >
+  <h2 class="text-center text-primary">登入</h2>
+  <div class="form-group">
+    <input type="text" class="form-control" required name="username" [(ngModel)]="model.username"  placeholder="使用者名稱">
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="favouriteValue">你最喜歡的值</label>
+    <select  id="favouriteValue" class="form-control">
+      <option *ngFor="let value of valuesFromHome">{{value.name}}</option>
+    </select>
+  </div> -->
+
+  <div class="form-group">
+    <input type="password" class="form-control"  required name="password" [(ngModel)]="model.password" placeholder="密碼" >
+  </div>
+
+  <div class="form-group text-center">
+    <button class="btn btn-success" type="submit" >註冊</button>
+    <button class="btn btn-default" type="button" (click)="cancel()">取消</button>
+  </div>
+
+</form>
+

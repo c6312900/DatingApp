@@ -1,0 +1,55 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top img-thumbnail"   src="{{user.photoUrl}}" alt="{{user.username}}" >
+          <div class="card-body">
+             <div>
+               <strong>地點:</strong>
+               <p>{{user.city}},{{user.country}}</p>
+             </div>
+             <div>
+              <strong>年齡:</strong>
+              <p>{{user.age}}</p>
+            </div>
+            <div>
+              <strong>最後登入時間:</strong>
+              <p>{{user.lastActive}}</p>
+            </div>
+            <div>
+              <strong>開始時間:</strong>
+              <p>{{user.created}}</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <div class="btn-group d-flex">
+              <button class="btn btn-primary w-100">喜歡</button>
+              <button class="btn btn-success w-100">訊息</button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="tab-panel">
+        <tabset class="member-tabset" >
+          <tab heading="關於 {{user?.username}}">
+             <h4 >描述</h4>
+             <p>{{user.introduction}}</p>
+             <h4 >尋找</h4>
+             <p>{{user.lookingFor}}</p>
+          </tab>
+          <tab heading="興趣">
+            <h4 >興趣</h4>
+            <p>{{user.introduction}}</p>
+          </tab>
+          <tab heading="圖" >
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+          </tab>
+          <tab heading="訊息">
+            <p>訊息在這裡</p>
+           </tab>
+        </tabset>
+       </div>
+   </div>
+  </div>
+</div>
